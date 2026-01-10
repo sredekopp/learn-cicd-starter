@@ -26,6 +26,9 @@ jobs:
 
       - name: Run staticcheck (linting)
         run: staticcheck ./...
+
+      - name: Check formatting
+        run: test -z $(go fmt ./...)
   tests:
     name: Tests
     runs-on: ubuntu-latest
