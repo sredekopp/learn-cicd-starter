@@ -23,12 +23,9 @@ jobs:
 
       - name: Check Go fmt
         run: test -z $(go fmt ./...)
-<<<<<<< HEAD
-=======
 
       - name: Run staticcheck (linting)
         run: staticcheck ./...
->>>>>>> 5069982 (added linting to CI style tests)
   tests:
     name: Tests
     runs-on: ubuntu-latest
