@@ -41,7 +41,7 @@ func TestMalformedAuthorizationHeader(t *testing.T) {
 
 func TestGoodAuthorizationHeader(t *testing.T) {
 	headers := http.Header{}
-	headers.Set("Authorization", "ApiKey 123456789")
+	headers.Set("Authorization", "ApiKey 0123456789")
 	got, err := GetAPIKey(headers)
 	if err != nil {
 		t.Fatalf("falied: %v", err)
